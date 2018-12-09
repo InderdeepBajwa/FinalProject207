@@ -25,3 +25,8 @@
   </ul>
 </div>
 
+<div class="admin-contentInfo">
+    <?php $getAuthors = runSafeQuery(
+        "SELECT * FROM posts", []
+    );  var_dump($getAuthors); ?>
+</div>
