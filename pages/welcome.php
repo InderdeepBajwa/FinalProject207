@@ -6,7 +6,7 @@
     session_start();
 }
 
-  if (!$_SESSION['LoggedUser']) {
+  if (!$_SESSION) {
     $hashedPassword  = md5($_POST['password']);
 
     if ($_POST['submit'] == "Sign Up") {
@@ -50,11 +50,11 @@
       }
       else {
         echo "Login Failed!";
+        header('Location: signIn.php');
       }
     }
     else {
       header('Location: signIn.php');
-      exit();
     }
   }
   // TODO User does not has image

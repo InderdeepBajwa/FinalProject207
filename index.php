@@ -9,6 +9,8 @@
 </head>
 <body>
   <?php include("/boilerplate/navbar.php") ?>
-  Home
+  <div class="header">
+
+  </div>
 </body>
 </html>

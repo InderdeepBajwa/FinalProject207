@@ -10,7 +10,6 @@
       <li style="float:right" <?php if($_SERVER['SCRIPT_NAME']=="/fp2/pages/signIn.php") { ?>  class="active"   <?php   }  ?>>
         <a href="/fp2/pages/signIn.php">Sign In</a></li>
       <?php else: ?>
-        <h3>Hi, <?php echo $_SESSION['LoggedUser']['authorName']; ?></h3>
       <li style="float:right" >
         <a href="/fp2/pages/signOut.php">Sign Out</a></li>
       <?php if ($_SESSION['LoggedUser']['isAdmin']=="HasAccess"): ?>
