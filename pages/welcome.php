@@ -28,9 +28,11 @@
       $user = runSafeQuery(
         "SELECT * FROM authors WHERE authorEmail=?",
         [
-          "s", $_POST['authorName']
+          "s", $_POST['authorEmail']
         ]
       );
+
+      $user = reset($user);
 
       if ($user['authorPassword'] == md5($_POST['password'])) {
         $_SESSION['LoggedUser'] = $user;
@@ -38,8 +40,11 @@
   }
     else if ($_POST['submit'] == "Sign In") {
       $user = runSafeQuery(
-        "SELECT * from authors WHERE authorEmail='admin@admin.admin';",
-        []
+        "SELECT * from authors WHERE authorEmail=?;",
+        [
+          "s",
+          $_POST['authorEmail']
+        ]
       );
 
       $user = reset($user);
