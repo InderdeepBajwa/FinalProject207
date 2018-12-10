@@ -164,3 +164,11 @@ nav li a:hover {
   padding: 0;
 }
 
+.postContentDisplay {
+  padding-bottom: 5%;
+  margin-top: 0;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin: auto auto;
+}
+

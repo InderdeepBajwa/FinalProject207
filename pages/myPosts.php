@@ -21,8 +21,10 @@
             $_SESSION["LoggedUser"]["authorID"]
         ]
     );
-
-    foreach($posts as $post) { ?>
+?>
+    <h1 class="postDisplay">Hey, <?php echo ($_SESSION["LoggedUser"]["authorName"]); ?>!</h1>
+    <h2 class="postDisplay">Here are your posts:</h2>&nbsp;
+    <?php foreach($posts as $post) { ?>
     <div class="postDisplay">
         <h2 class="postTitle"><a href="<?php echo "../boilerplate/utl/dynamicPage.php?id="?><?php $postData=$post['postID'];echo "$postData"?>"><?php echo $post['postTitle'] ?></a></h2>
         <p style="font-style: italic;"><?php echo $post['publishDate'] ?></p>
