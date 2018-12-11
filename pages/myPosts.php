@@ -1,6 +1,5 @@
 <?php
     ob_start();
-    require('../boilerplate/head.php');
     require('../boilerplate/navbar.php');
     require('../dbase/dbfunctions.php');
 
@@ -26,7 +25,7 @@
     <h2 class="postDisplay">Here are your posts:</h2>&nbsp;
     <?php foreach($posts as $post) { ?>
     <div class="postDisplay">
-        <h2 class="postTitle"><a href="<?php echo "../boilerplate/utl/dynamicPage.php?id="?><?php $postData=$post['postID'];echo "$postData"?>"><?php echo $post['postTitle'] ?></a></h2>
+        <h2 class="postTitle"><a style="text-decoration:none; color: #a5a5a5;" href="<?php echo "../boilerplate/utl/dynamicPage.php?id="?><?php $postData=$post['postID'];echo "$postData"?>"><?php echo $post['postTitle'] ?></a></h2>
         <p style="font-style: italic;"><?php echo $post['publishDate'] ?></p>
         <p class="excerpt"><?php echo $post['postContent'] ?></p>
     </div>

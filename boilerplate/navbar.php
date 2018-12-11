@@ -3,7 +3,7 @@
 <nav>
   <ul>
     <li <?php if($_SERVER['SCRIPT_NAME']=="/fp2/index.php") { ?> class="active"  <?php   }  ?>>
-      <a href="../">Home</a></li>
+      <a href="/fp2/">Home</a></li>
       <li></li>
     <?php if (!isset($_SESSION['LoggedUser'])): ?>
       <li style="float:right" <?php if($_SERVER['SCRIPT_NAME']=="/fp2/pages/signUp.php") { ?>  class="active"   <?php   }  ?>>
@@ -21,7 +21,7 @@
           <li style="float:right" <?php if($_SERVER['SCRIPT_NAME']=="/fp2/admin/index.php") { ?>  class="active"   <?php   }  ?>>
           <a href="/fp2/admin">Admin</a></li>
         <?php endif; ?>
-      <li style="float:right;"><a href="">My Profile</a></li>
+      <li style="float:right;"><a href="/fp2/pages/myProfile.php">My Profile</a></li>
     <?php endif; ?>
   </ul>
 </nav>

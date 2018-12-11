@@ -140,8 +140,9 @@ nav li a:hover {
 }
 
 .admin-contentInfo {
-  width: 79%;
+  width: 70%;
   float: right;
+  padding: 5%;
 }
 
 /* Homepapge */
@@ -170,5 +171,56 @@ nav li a:hover {
   padding-left: 15%;
   padding-right: 15%;
   margin: auto auto;
+}
+
+.profilePic {
+  max-width: 50%;
+  margin: auto auto;
+  border-radius: 90px;
+}
+
+.homepageDiv {
+  margin: auto auto;
+  width: 70%;
+  padding-bottom: 4em;
+}
+
+.thumbnail {
+  position: relative;
+  width: 20%;
+  height: 200px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.thumbnail img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+
+.thumbnailInfo {
+  display: inline;
+}
+
+.thumbnailExcerpt {
+  float:right;
+  width: 60%;
+}
+
+.excerpt {
+  text-align: left;
+  width: 80%;
+  margin: auto auto;
+}
+
+.thumbnailTitle a {
+  text-decoration: none;
+  color: gray;
 }
 

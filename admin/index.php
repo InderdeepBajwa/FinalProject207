@@ -17,7 +17,14 @@
  ?>
 <div class="admin-leftbar">
   <ul>
-    <li><img style="max-width: 50%; margin: auto auto; border-radius: 90px;" src="https://www.w3schools.com/howto/img_avatar2.png" alt=""></li>
+    <li><img class="profilePic" src="<?php 
+      if (!$_SESSION['LoggedUser']['authorImg']) {
+        echo "https://www.w3schools.com/howto/img_avatar2.png";
+      }
+      else {
+        echo $_SESSION['LoggedUser']['authorImg'];
+      }
+    ?>" alt=""></li>
     <li>Hey, <?php echo $_SESSION['LoggedUser']['authorName'] ?>!</li>
     <li><a href="index.php">DashBoard</a></li>
     <li><a href="managePosts.php">Manage Posts</a></li>

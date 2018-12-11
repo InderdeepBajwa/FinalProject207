@@ -1,6 +1,5 @@
 <?php
   ob_start();
-  require('../boilerplate/head.php');
   require('../boilerplate/navbar.php');
   require('../dbase/dbfunctions.php');
 
@@ -14,6 +13,12 @@
   $title = "Admin Panel";
   $buffer = preg_replace('/(<title>)(.*?)(<\/title>)/i', '$1' . $title . '$3', $buffer); echo $buffer;
 
+  $getPosts = runSafeQuery(
+    "SELECT * FROM posts", []
+  );
+
+  reset($getPosts);
+
  ?>
 <div class="admin-leftbar">
   <ul>
@@ -26,7 +31,17 @@
 </div>
 
 <div class="admin-contentInfo">
-    <?php $getAuthors = runSafeQuery(
-        "SELECT * FROM posts", []
-    );  var_dump($getAuthors); ?>
+    <? foreach($getPosts as $post) { ?>
+      <hr>
+        <h2><?php echo $post['postTitle'] ?></h2>
+        <p>By <?php $userName = runSafeQuery(
+          "SELECT authorName FROM authors WHERE authorID=?",
+          [
+            "i",
+            $post['authorID']
+          ]
+          ); echo $userName[0]['authorName'] ?></p>
+          <button style="float:right;position: relative; top: -50px; background-color: aqua; border-color:aqua; padding: 4px;"><a href="<?php echo "../boilerplate/utl/adminDeletePost.php?id="?><?php $postData=$post['postID'];echo "$postData"?>">Delete Post</a></button>
+      <hr>
+    <?php } ?>
 </div>

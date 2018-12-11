@@ -1,12 +1,8 @@
 <?php
     ob_start();
-    require('../head.php');
     require('../navbar.php');
     require('../../dbase/dbfunctions.php');
 
-    if (!isset($_SESSION['LoggedUser'])) {
-    header("Location: ../index.php");
-    }
 
     if (!isset($_GET['id'])) {
         header("Location: ../../");
