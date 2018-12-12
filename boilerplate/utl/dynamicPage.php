@@ -59,7 +59,7 @@
 
 
         <h4>Add a comment</h4>
-        <?php if(isset($_SESSION['LoggedOn'])) { $comments = getComments();?>
+        <?php if(isset($_SESSION['LoggedUser'])) { $comments = getComments();?>
             <form class="commentBox" action="../utl/createComment.php?id=3" method="post">
                 <textarea required name="commentText" cols="30" rows="10"></textarea>
                 <input type="submit" name="<?php echo $post['postID'] ?>" placeholder="Sign Up" value="Post">
