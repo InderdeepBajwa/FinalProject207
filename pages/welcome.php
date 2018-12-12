@@ -62,7 +62,7 @@
     }
   }
   if (isset($_SESSION['LoggedUser'])){
-    if($_SESSION['LoggedUser']['authorImg'] == 'NULL') {
+    if(empty($_SESSION['LoggedUser']['authorImg'])) {
       
     }
     else {
@@ -70,7 +70,7 @@
     }
   }
   else {
-    header('Location: ../index.php'); // TODO Add user blog page
+    header('Location: ../index.php');
   }
   
   ob_start();

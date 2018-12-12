@@ -1,6 +1,5 @@
 <?php
 ob_start();
-require('../boilerplate/head.php');
 require('../boilerplate/navbar.php');
 
 if (isset($_SESSION['LoggedUser'])) {

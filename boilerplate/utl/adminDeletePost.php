@@ -20,5 +20,5 @@
         ]
     );
 
-    header("Location: /fp2/admin/")
+    header("Location: /fp2/admin/managePosts.php")
 ?>

@@ -1,7 +1,6 @@
 <?php 
 
     ob_start();
-    require('../navbar.php');
     require('../../dbase/dbfunctions.php');
 
     if (!isset($_SESSION['LoggedUser'])) {
@@ -20,5 +19,5 @@
         ]
     );
 
-    header("Location: /fp2/admin/")
+    header("Location: /fp2/admin/manageUsers.php")
 ?>

@@ -21,7 +21,7 @@
           <li style="float:right" <?php if($_SERVER['SCRIPT_NAME']=="/fp2/admin/index.php") { ?>  class="active"   <?php   }  ?>>
           <a href="/fp2/admin">Admin</a></li>
         <?php endif; ?>
-      <li style="float:right;"><a href="/fp2/pages/myProfile.php">My Profile</a></li>
+      <li style="float:right;"><a href="/fp2/pages/myProfile.php"><?php echo $_SESSION['LoggedUser']['authorName'] ?>'s Profile</a></li>
     <?php endif; ?>
   </ul>
 </nav>
